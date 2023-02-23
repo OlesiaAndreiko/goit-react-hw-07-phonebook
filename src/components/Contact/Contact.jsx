@@ -7,14 +7,16 @@ export const Contact = ({ contact }) => {
   const { id, name, number } = contact;
   const dispatch = useDispatch();
 
-  const handleDelete = () => dispatch(deleteContact(id));
+
+  // const handleDelete = () => dispatch(deleteContact(id));
 
   return (
     <>
       <ItemContact key={id}>
         <span>{name}</span>
         <span>{number}</span>
-        <BtnDelete type="button" onClick={handleDelete}>
+        {/* <BtnDelete type="button" onClick={handleDelete}> */}
+        <BtnDelete type="button" >
           Delete
         </BtnDelete>
       </ItemContact>
