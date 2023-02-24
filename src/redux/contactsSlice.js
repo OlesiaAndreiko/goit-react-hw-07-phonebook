@@ -25,41 +25,17 @@ const contactsSlice = createSlice({
         );
         state.items.splice(index, 1);
       })
-      .addMatcher(
-        isAnyOf(
-          ...getActions('pending')
-          // fetchContacts.pending,
-          // addContact.pending,
-          // deleteContact.pending
-        ),
-        state => {
-          state.isLoading = true;
-        }
-      )
-      .addMatcher(
-        isAnyOf(
-          ...getActions('rejected')
-          // fetchContacts.rejected,
-          // addContact.rejected,
-          // deleteContact.rejected
-        ),
-        (state, action) => {
-          state.isLoading = false;
-          state.error = action.payload;
-        }
-      )
-      .addMatcher(
-        isAnyOf(
-          ...getActions('fulfilled')
-          // fetchContacts.fulfilled,
-          // addContact.fulfilled,
-          // deleteContact.fulfilled
-        ),
-        state => {
-          state.isLoading = false;
-          state.error = null;
-        }
-      ),
+      .addMatcher(isAnyOf(...getActions('pending')), state => {
+        state.isLoading = true;
+      })
+      .addMatcher(isAnyOf(...getActions('fulfilled')), state => {
+        state.isLoading = false;
+        state.error = null;
+      })
+      .addMatcher(isAnyOf(...getActions('rejected')), (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      }),
 });
 
 export const contactsReducer = contactsSlice.reducer;
