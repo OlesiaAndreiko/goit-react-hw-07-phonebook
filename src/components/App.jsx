@@ -1,8 +1,8 @@
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ContactList } from '../components/ContactList/ContactList';
-import { Filter } from './Filter/Filter';
-import { FormContact } from './FormContact/FormContact';
+// import { Filter } from './Filter/Filter';
+// import { FormContact } from './FormContact/FormContact';
 import { Container } from './Container/Container.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -20,8 +20,8 @@ export const App = () => {
    
   return (
     <Container>
-      <FormContact />
-      <Filter/>
+      {/* <FormContact /> */}
+      {/* <Filter/> */}
       {isLoading && !error && <b>Request in progress...</b>}
       <ContactList />
       <ToastContainer position="top-center" theme="colored" />

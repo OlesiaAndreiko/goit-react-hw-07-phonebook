@@ -15,15 +15,15 @@ export const fetchContacts = createAsyncThunk(
   }
 );
 
-export const addContact = createAsyncThunk(
-    "contacts/addContact", 
-    async(contact, thunkAPI) => {
-        const { name, number } = contact;
-        try {
-            const responce = await axios.post("/contacts", { name, number });
-            return responce.data;
-        } catch (error) {
-            return thunkAPI.rejectWithValue(error.message);
-        }
-    }
-)
+// export const addContact = createAsyncThunk(
+//     "contacts/addContact", 
+//     async(contact, thunkAPI) => {
+//         const { name, number } = contact;
+//         try {
+//             const responce = await axios.post("/contacts", { name, number });
+//             return responce.data;
+//         } catch (error) {
+//             return thunkAPI.rejectWithValue(error.message);
+//         }
+//     }
+// )
