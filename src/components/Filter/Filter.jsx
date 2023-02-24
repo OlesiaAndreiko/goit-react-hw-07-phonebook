@@ -1,11 +1,11 @@
 import { FilerWrap, FieldCaption, ContactInput } from './Filter.styled';
 import { useSelector, useDispatch } from 'react-redux';
-import { getFilter } from 'redux/selectors';
+import { selectFilter } from 'redux/selectors';
 import { searchContact } from '../../redux/filterSlise';
 import { Heading } from 'components/Heading/Hading';
 
 export const Filter = () => {
-  const filter = useSelector(getFilter);  
+  const filter = useSelector(selectFilter);  
   const dispatch = useDispatch();
 
   const handleChange = event => dispatch(searchContact(event.target.value));

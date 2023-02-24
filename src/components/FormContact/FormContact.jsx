@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify';
 import {useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/operations';
-import { getContacts } from '../../redux/selectors';
+import { selectContacts } from '../../redux/selectors';
 import { Heading } from '../Heading/Hading';
 
 import {
@@ -13,7 +13,7 @@ import {
 
 export const FormContact = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
 
   const handleSubmit = event => {
     event.preventDefault();
