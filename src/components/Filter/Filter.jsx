@@ -7,7 +7,7 @@ import { Heading } from 'components/Heading/Hading';
 export const Filter = () => {
   const filter = useSelector(selectFilter);  
   const dispatch = useDispatch();
-
+  
   const handleChange = event => dispatch(searchContact(event.target.value));
 
   return (
