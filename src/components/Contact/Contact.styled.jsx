@@ -33,3 +33,7 @@ export const BtnDelete = styled.button`
     color: #c6ccd1;
   }
 `;
+
+export const Fullname = styled.span`
+width: 250px;
+`;
