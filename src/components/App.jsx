@@ -1,6 +1,6 @@
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import { ContactList } from '../components/ContactList/ContactList';
+import { ContactList } from '../components/ContactList/ContactList';
 // import { Filter } from './Filter/Filter';
 // import { FormContact } from './FormContact/FormContact';
 import { Container } from './Container/Container.styled';
@@ -24,7 +24,7 @@ export const App = () => {
       {/* <Filter/> */}
       {isLoading && !error && <b>Request in progress...</b>}
       <h1>Hello world</h1>
-      {/* <ContactList /> */}
+      <ContactList />
       <ToastContainer position="top-center" theme="colored" />
     </Container>
   );
