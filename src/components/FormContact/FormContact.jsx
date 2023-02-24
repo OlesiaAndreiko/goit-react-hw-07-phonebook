@@ -1,7 +1,6 @@
 import { toast } from 'react-toastify';
 import {useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/operations';
-// import { addContact } from '../../redux/contactsSlice';
 import { getContacts } from '../../redux/selectors';
 import { Heading } from '../Heading/Hading';
 
@@ -31,7 +30,6 @@ export const FormContact = () => {
       event.target.reset();
       return;
     } else {
-      // dispatch(addContact(form.name.value, form.number.value));
       dispatch(addContact({name: form.name.value, number: form.number.value}))
     }
 
