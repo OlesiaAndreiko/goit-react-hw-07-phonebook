@@ -19,7 +19,7 @@ export const Filter = () => {
         <ContactInput
           type="text"
           name="search"
-          value={filter.search}
+          value={filter}
           onChange={handleChange}
           placeholder="Please start typing name..."
         />

@@ -20,7 +20,7 @@ export const FormContact = () => {
     const form = event.target.elements;
 
     if (
-      contacts.items.some(
+      contacts.some(
         contact =>
           contact.name.toLowerCase().trim() ===
           form.name.value.toLowerCase().trim()
